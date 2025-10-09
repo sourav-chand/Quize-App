@@ -13,7 +13,7 @@ app.use(cors());
 //     methods: ["GET", "POST", "PUT", "DELETE"],
 //   }
 app.use(express.json());
-
+app.get("/", (req, res) => res.send("Hello World!"));
 app.use("/api/quizzes", quizzesRouter);
 
 const PORT = process.env.PORT || 5000;
